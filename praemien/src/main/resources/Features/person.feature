@@ -17,23 +17,11 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: Vollstandigkeit des Modells für die Person
-  Ich möchte die Vollständigkeit der Personendaten überprüfen
+Feature: Person Management
 
-  @tag1
-  Scenario: Variable für den Namen vorhanden
-    Given Klasse Person ist erstellt.
-    When personName is not NULL
-    Then personName is valid
-
-
-  @tag2
-  Scenario Outline: Title of your scenario outline
-    Given I want to write a step with <name>
-    When I check for the <value> in step
-    Then I verify the <status> in step
-
-    Examples: 
-      | name  | value | status  |
-      | name1 |     5 | success |
-      | name2 |     7 | Fail    |
+  Scenario: Create a new Person
+    Given a person with id 1, name "Müller", and first name "Hans"
+    When I create the person
+    Then the person's id should be 1
+    And the person's name should be "Müller"
+    And the person's first name should be "Hans"
