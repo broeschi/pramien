@@ -20,9 +20,9 @@ public class PersonStepsTest extends Person{
 	
 	private Person person;
 
-	@Given("a person with id {int}, name {string}, and frist name {string} ")
-	public void a_person_with_id_name_and_first_name(IntegerProperty id, StringProperty name, StringProperty firstName) {
-		person = new Person(id, name, firstName);
+	@Given("a person with id {int}, name {string}, and frist name {string}, and lizenzno {int}")
+	public void a_person_with_id_name_and_first_name(int id, String name, String firstName, int lizenzno) {
+		person = new Person(id, name, firstName, lizenzno);
 	}
 
 	@When("I create the person")

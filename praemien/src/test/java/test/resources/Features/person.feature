@@ -20,8 +20,9 @@
 Feature: Person Management
 
   Scenario: Create a new Person
-    Given a person with id 1, name "Müller", and first name "Hans"
+    Given a person with id 1, name "Müller" and first name "Hans" and lizenzno 12345678901
     When I create the person
     Then the person's id should be 1
     And the person's name should be "Müller"
     And the person's first name should be "Hans"
+    And the person's lizenzno should be 12345678901
