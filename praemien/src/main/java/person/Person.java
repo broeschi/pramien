@@ -12,50 +12,50 @@ import javafx.beans.property.StringProperty;
 /** Klasse zum Bilden der Teilnehmer */
 public class Person {
 
-	private int adrId;
-	private String adrVorname;
-	private String adrName;
+	public int personId;
+	public String personVorname;
+	public String personName;
 	//private final StringProperty adrStrasse;
 	//private final StringProperty adrNr;
 	//private final IntegerProperty adrPLZ;
 	//private final StringProperty adrWohnort;
-	public int adrJahrgang;
-	public int adrLizenz;
+	public int personJahrgang;
+	public int personLizenz;
 
 
 //	/**
 //	 * Konstruktor für eine Person (Modell)
 //	 * 
-//	 * @param adrId
-//	 * @param adrName
-//	 * @param adrVorname
+//	 * @param personId
+//	 * @param personName
+//	 * @param personVorname
 //
-//	 * @param adrJahrgang
+//	 * @param personJahrgang
 //
 //
 //	 */
-//	public Person(int adrId, String adrName, String adrVorname, int adrJahrgang) {
-//		this.adrId = new Integer(adrId);
-//		this.adrName = new String(adrName);
-//		this.adrVorname = new String(adrVorname);
-//		this.adrJahrgang = new Integer(adrJahrgang);
+//	public Person(int personId, String personName, String personVorname, int personJahrgang) {
+//		this.personId = new Integer(personId);
+//		this.personName = new String(personName);
+//		this.personVorname = new String(personVorname);
+//		this.personJahrgang = new Integer(personJahrgang);
 //
 //	}
 
 	/**
 	 * Konstruktor für die Erfassung von Vorname und Name
 	 * 
-	 * @param adrName
-	 * @param adrVorname
+	 * @param personName
+	 * @param personVorname
 	 */
-	public Person(String adrName, String adrVorname) {
-		this.adrId = new Integer(adrId);
-		this.adrName = new String(adrName);
-		this.adrVorname = new String(adrVorname);
-
-		//this.adrJahrgang = new SimpleIntegerProperty(adrJahrgang);
-
-	}
+//	public Person(String personName, String personVorname) {
+//		this.personId = new Integer(personId);
+//		this.personName = new String(personName);
+//		this.personVorname = new String(personVorname);
+//
+//		//this.adrJahrgang = new SimpleIntegerProperty(adrJahrgang);
+//
+//	}
 	
 	/**
 	 * Konstruktor für den Cucumpertest 
@@ -63,16 +63,16 @@ public class Person {
 	 * abgefragt werden die ID, der Name und Vorname des Rennfahrers und seine Lizenznummer
 	 * 
 	 * 
-	 * @param adrId
-	 * @param adrName
-	 * @param adrVorname
-	 * @param adrLizenz
+	 * @param personId
+	 * @param personName
+	 * @param personVorname
+	 * @param personLizenz
 	 */
-	public Person(int adrId, String adrName, String adrVorname, int adrLizenz) {
-		this.adrId = new Integer(adrId);
-		this.adrName = new String(adrName);
-		this.adrVorname = new String(adrVorname);
-		this.adrLizenz = new Integer(adrLizenz);
+	public Person(int personId, String personName, String personVorname, int personLizenz) {
+		this.personId = new Integer(personId);
+		this.personName = new String(personName);
+		this.personVorname = new String(personVorname);
+		this.personLizenz = new Integer(personLizenz);
 			//this.adrJahrgang = new SimpleIntegerProperty(adrJahrgang);
 
 	}
@@ -81,59 +81,63 @@ public class Person {
 	 * leerer Konstruktor
 	 */
 	public Person() {
-		this(null, null);
+		;
 	}
 
-	public String adrName() {
-		return adrName;
+	public String personName() {
+		return personName;
 	}
 
 	public String Vorname() {
-		return adrVorname;
+		return personVorname;
 	}
 
-	public Integer adrIdProperty() {
-		return adrId;
+	public Integer personIdProperty() {
+		return personId;
 	}
 
-	public int getAdrId() {
-		return adrId;
+	public int personId() {
+		return personId;
+	}
+	
+	public int getPersonId() {
+		return personId;
 	}
 
-	public void setAdrId(int adrId) {
-		this.adrId = adrId;
+	public void setPersonId(int adrId) {
+		this.personId = adrId;
 	}
 
-	public String getAdrVorname() {
-		return adrVorname;
+	public String getPersonVorname() {
+		return personVorname;
 	}
 
-	public void setAdrVorname(String adrVorname) {
-		this.adrVorname = adrVorname;
+	public void setPersonVorname(String personVorname) {
+		this.personVorname = personVorname;
 	}
 
-	public String getAdrName() {
-		return adrName;
+	public String getPersonName() {
+		return personName;
 	}
 
-	public void setAdrName(String adrName) {
-		this.adrName = adrName;
+	public void setPersonName(String adrName) {
+		this.personName = adrName;
 	}
 
-	public int getAdrJahrgang() {
-		return adrJahrgang;
+	public int getPersonJahrgang() {
+		return personJahrgang;
 	}
 
-	public void setAdrJahrgang(int adrJahrgang) {
-		this.adrJahrgang = adrJahrgang;
+	public void setPersonJahrgang(int personJahrgang) {
+		this.personJahrgang = personJahrgang;
 	}
 
-	public int getAdrLizenz() {
-		return adrLizenz;
+	public int getPersonLizenz() {
+		return personLizenz;
 	}
 
-	public void setAdrLizenz(int adrLizenz) {
-		this.adrLizenz = adrLizenz;
+	public void setPersonLizenz(int adrLizenz) {
+		this.personLizenz = adrLizenz;
 	}
 
 

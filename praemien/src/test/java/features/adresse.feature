@@ -17,12 +17,14 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: Person Management
+Feature: Adresse verwalten
 
-  Scenario: Create a new Person
-    Given a person with id 1, name "Müller" and first name "Hans" and lizenzno 12345678901
-    When I create the person
-    Then the person's id should be 1
-    And the person's name should be "Müller"
-    And the person's first name should be "Hans"
-    And the person's lizenzno should be 12345678901
+  Scenario: Create a new Adresse
+    Given a adresse with adrid 1, idPerson 1 and strasse "Zielgasse" and nummer 99 and plz 1234 and ort "Altenrhein"
+    When I create the adresse
+    Then the adresse's adrid should be 1
+    And the adresse's idPerson should be 1
+    And the adresse's strasse should be "Zielgasse"
+    And the adresse's nummer should be 99
+    And the adresse's plz should be 1234
+    And the adresse's ort should be "Altenrhein"
