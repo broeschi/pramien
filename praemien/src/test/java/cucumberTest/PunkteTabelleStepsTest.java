@@ -7,45 +7,45 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import stammdaten.Punktetabelle;
+import reglement.PunkteTabelle;
 
-public class PunkteTabelleStepsTest extends Punktetabelle {
+public class PunkteTabelleStepsTest extends PunkteTabelle {
 
-	private Punktetabelle punktetabelle;
+	private PunkteTabelle punkteTabelle;
 
 	@Given("a punktetabelle with id {int}, idRennart {int} and rang {int} and punkte {int}")
 	public void a_punktetabelle_with_id_id_rennart_and_rang_and_punkte(int id, int idRennart, int rang, int punkte) {
-		punktetabelle = new Punktetabelle(id, idRennart, rang, punkte);
+		punkteTabelle = new PunkteTabelle(id, idRennart, rang, punkte);
 		// Write code here that turns the phrase above into concrete actions
 	}
 
 	@When("I create the punktetabelle")
 	public void i_create_the_punktetabelle() {
-		assertNotNull(punktetabelle);
+		assertNotNull(punkteTabelle);
 		// Write code here that turns the phrase above into concrete actions
 	}
 
 	@Then("the punktetabelle's id should be {int}")
 	public void the_punktetabelle_s_id_should_be(int id) {
-		assertEquals(id, punktetabelle.getPunktId());
+		assertEquals(id, punkteTabelle.getPunktId());
 		// Write code here that turns the phrase above into concrete actions
 	}
 
 	@Then("the punktetabelle's rang should be {int}")
 	public void the_punktetabelle_s_rang_should_be(int rang) {
-		assertEquals(rang, punktetabelle.getPunktRang());
+		assertEquals(rang, punkteTabelle.getPunktRang());
 		// Write code here that turns the phrase above into concrete actions
 	}
 
 	@Then("the punktetabelle's idRennart should be {int}")
 	public void the_punktetabelle_s_id_rennart_should_be(Integer idRennart) {
-		assertEquals(idRennart, punktetabelle.getPunktRennartId());
+		assertEquals(idRennart, punkteTabelle.getPunktRennartId());
 		// Write code here that turns the phrase above into concrete actions
 	}
 
 	@Then("the punktetabelle's punkte should be {int}")
 	public void the_punktetabelle_s_punkte_should_be(int punkte) {
-		assertEquals(punkte, punktetabelle.getPunktPunkte());
+		assertEquals(punkte, punkteTabelle.getPunktPunkte());
 		// Write code here that turns the phrase above into concrete actions
 	}
 
