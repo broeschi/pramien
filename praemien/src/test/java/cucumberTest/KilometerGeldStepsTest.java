@@ -9,7 +9,7 @@ import reglement.KilometerGeld;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-public class KilometerGeldStepsTest extends KilometerGeld {
+public class KilometerGeldStepsTest {
 
     private KilometerGeld kilometerGeld;
 

@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources/java", glue = "praemien")
-public class PersonStepsTest extends Person{
+public class PersonStepsTest {
 	
 	private Person person;
 
