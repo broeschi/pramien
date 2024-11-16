@@ -74,6 +74,7 @@ public class Person {
 		this.personVorname = new String(personVorname);
 		this.personLizenz = new Integer(personLizenz);
 			//this.adrJahrgang = new SimpleIntegerProperty(adrJahrgang);
+		System.out.println("gelesene Person: " + personVorname + " " + personName + " " + personLizenz );
 
 	}
 
@@ -81,7 +82,7 @@ public class Person {
 	 * leerer Konstruktor
 	 */
 	public Person() {
-		;
+		System.out.println("gelesene Person: " + personVorname + " " + personName + " " + personLizenz );
 	}
 
 	public String personName() {

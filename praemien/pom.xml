@@ -42,6 +42,11 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
+			<groupId>javax.persistence</groupId>
+			<artifactId>javax.persistence-api</artifactId>
+			<version>2.2</version>
+		</dependency>
+		<dependency>
 			<groupId>com.github.DeBukkIt</groupId>
 			<artifactId>SimpleFileStorage</artifactId>
 			<version>1.2.0</version>
@@ -52,8 +57,7 @@
 			<artifactId>jackcess</artifactId>
 			<version>4.0.0</version>
 		</dependency>
-		<!--
-		https://mvnrepository.com/artifact/org.xhtmlrenderer/flying-saucer-pdf -->
+		<!--https://mvnrepository.com/artifact/org.xhtmlrenderer/flying-saucer-pdf -->
 		<dependency>
 			<groupId>org.xhtmlrenderer</groupId>
 			<artifactId>flying-saucer-pdf</artifactId>
@@ -71,8 +75,7 @@
 			<artifactId>javafx-controls</artifactId>
 			<version>16-ea+6</version>
 		</dependency>
-		<!--
-		https://mvnrepository.com/artifact/org.eclipse.mylyn.commons/workbench -->
+		<!--https://mvnrepository.com/artifact/org.eclipse.mylyn.commons/workbench -->
 		<!-- https://mvnrepository.com/artifact/org.assertj/assertj-core -->
 		<dependency>
 			<groupId>org.assertj</groupId>
@@ -87,8 +90,7 @@
 			<version>1.10.19</version>
 			<scope>test</scope>
 		</dependency>
-		<!--
-		https://mvnrepository.com/artifact/au.com.dius/pact-jvm-provider-junit -->
+		<!--		https://mvnrepository.com/artifact/au.com.dius/pact-jvm-provider-junit -->
 		<dependency>
 			<groupId>au.com.dius</groupId>
 			<artifactId>pact-jvm-provider-junit</artifactId>
@@ -119,8 +121,7 @@
 			<version>7.20.1</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
-		<!--
-		https://mvnrepository.com/artifact/io.cucumber/cucumber-junit-platform-engine -->
+		<!--https://mvnrepository.com/artifact/io.cucumber/cucumber-junit-platform-engine -->
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-junit-platform-engine</artifactId>
@@ -130,7 +131,8 @@
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
-			<version>2.2.224</version>
+			<version>2.1.214</version>
+			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -146,6 +148,11 @@
 			<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-surefire-plugin</artifactId>
 			<version>3.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.4.32.Final</version>
 		</dependency>
 	</dependencies>
 	<build>
