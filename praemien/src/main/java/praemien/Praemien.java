@@ -1,30 +1,67 @@
 package praemien;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
+@Entity
 public class Praemien {
 	
-	public int praemieId;
-	public int praemienSaisonId;
-	public int praemienEinzelRennenId;
-	public boolean praemienHelfereinsatz;
-	public boolean praemienEm;
-	public boolean praemienWm;
-	public boolean praemienOs;
-	public boolean praemienTsp;
-	public int praemienEmBetrag;
-	public int praemienWmBetrag;
-	public int praemienOsBetrag;
-	public int praemienTspBetrag;
-	public int praemienLizenzbeitrag;
-	public int praemienTalentsichtung;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "praemie_id")
+    private int praemieId;
+
+    @Column(name = "praemien_saison_id")
+    private int praemienSaisonId;
+
+    @Column(name = "praemien_einzel_rennen_id")
+    private int praemienEinzelRennenId;
+
+    @Column(name = "praemien_helfereinsatz")
+    private boolean praemienHelfereinsatz;
+
+    @Column(name = "praemien_em")
+    private boolean praemienEm;
+
+    @Column(name = "praemien_wm")
+    private boolean praemienWm;
+
+    @Column(name = "praemien_os")
+    private boolean praemienOs;
+
+    @Column(name = "praemien_tsp")
+    private boolean praemienTsp;
+
+    @Column(name = "praemien_em_betrag")
+    private int praemienEmBetrag;
+
+    @Column(name = "praemien_wm_betrag")
+    private int praemienWmBetrag;
+
+    @Column(name = "praemien_os_betrag")
+    private int praemienOsBetrag;
+
+    @Column(name = "praemien_tsp_betrag")
+    private int praemienTspBetrag;
+
+    @Column(name = "praemien_lizenzbeitrag")
+    private int praemienLizenzbeitrag;
+
+    @Column(name = "praemien_talentsichtung")
+    private int praemienTalentsichtung;
 	
 	public Praemien () {
 		
 	}
 
 	public Praemien(int praemieId, int praemienSaisonId, int praemienEinzelRennenId, boolean praemienHelfereinsatz,
-			boolean praemienEm, boolean praemienWm, boolean praemienOs, boolean pramienTsp, int praemienEmBetrag,
+			boolean praemienEm, boolean praemienWm, boolean praemienOs, boolean praemienTsp, int praemienEmBetrag,
 			int praemienWmBetrag, int praemienOsBetrag, int praemienTspBetrag, int praemienLizenzbeitrag,
-			int pramienTalentsichtung) {
+			int praemienTalentsichtung) {
 		//super();
 		this.praemieId = praemieId;
 		this.praemienSaisonId = praemienSaisonId;
@@ -39,7 +76,7 @@ public class Praemien {
 		this.praemienOsBetrag = praemienOsBetrag;
 		this.praemienTspBetrag = praemienTspBetrag;
 		this.praemienLizenzbeitrag = praemienLizenzbeitrag;
-		this.praemienTalentsichtung = pramienTalentsichtung;
+		this.praemienTalentsichtung = praemienTalentsichtung;
 	}
 
 	public int getPraemieId() {
@@ -98,12 +135,12 @@ public class Praemien {
 		this.praemienOs = praemienOs;
 	}
 
-	public boolean isPramienTsp() {
+	public boolean isPraemienTsp() {
 		return praemienTsp;
 	}
 
-	public void setPramienTsp(boolean pramienTsp) {
-		this.praemienTsp = pramienTsp;
+	public void setPraemienTsp(boolean praemienTsp) {
+		this.praemienTsp = praemienTsp;
 	}
 
 	public int getPraemienEmBetrag() {
@@ -150,8 +187,8 @@ public class Praemien {
 		return praemienTalentsichtung;
 	}
 
-	public void setPramienTalentsichtung(int pramienTalentsichtung) {
-		this.praemienTalentsichtung = pramienTalentsichtung;
+	public void setPraemienTalentsichtung(int praemienTalentsichtung) {
+		this.praemienTalentsichtung = praemienTalentsichtung;
 	}
 	
 

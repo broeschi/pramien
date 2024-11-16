@@ -17,7 +17,7 @@ class PraemienTest {
         assertFalse(praemien.isPraemienEm());
         assertFalse(praemien.isPraemienWm());
         assertFalse(praemien.isPraemienOs());
-        assertFalse(praemien.isPramienTsp());
+        assertFalse(praemien.isPraemienTsp());
         assertEquals(0, praemien.getPraemienEmBetrag());
         assertEquals(0, praemien.getPraemienWmBetrag());
         assertEquals(0, praemien.getPraemienOsBetrag());
@@ -54,7 +54,7 @@ class PraemienTest {
         assertTrue(praemien.isPraemienEm());
         assertFalse(praemien.isPraemienWm());
         assertTrue(praemien.isPraemienOs());
-        assertFalse(praemien.isPramienTsp());
+        assertFalse(praemien.isPraemienTsp());
         assertEquals(praemienEmBetrag, praemien.getPraemienEmBetrag());
         assertEquals(praemienWmBetrag, praemien.getPraemienWmBetrag());
         assertEquals(praemienOsBetrag, praemien.getPraemienOsBetrag());
@@ -162,17 +162,17 @@ class PraemienTest {
     }
 
     @Test
-    void testIsPramienTsp() {
+    void testIsPraemienTsp() {
         Praemien praemien = new Praemien();
-        praemien.setPramienTsp(true);
-        assertTrue(praemien.isPramienTsp());
+        praemien.setPraemienTsp(true);
+        assertTrue(praemien.isPraemienTsp());
     }
 
     @Test
     void testSetPramienTsp() {
         Praemien praemien = new Praemien();
-        praemien.setPramienTsp(false);
-        assertFalse(praemien.isPramienTsp());
+        praemien.setPraemienTsp(false);
+        assertFalse(praemien.isPraemienTsp());
     }
 
     @Test
