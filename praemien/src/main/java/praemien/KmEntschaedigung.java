@@ -14,9 +14,9 @@ public class KmEntschaedigung {
 	}
 
 	/**
-	 * 
+	 *
 	 * Konstruktor für die Berechnung der Kilometerbeiträge zu den Rennen
-	 * 
+	 *
 	 * @param kmEndschId
 	 * @param kmEntschEinzelRennenId
 	 * @param kmEntschPersonId

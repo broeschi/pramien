@@ -37,5 +37,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="lib" path="hsqldb-jdk8.jar"/>
+	<classpathentry kind="lib" path="hsqldb-2.7.4.zip"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

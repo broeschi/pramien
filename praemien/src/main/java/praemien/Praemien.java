@@ -2,14 +2,14 @@ package praemien;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class Praemien {
-	
-	
+
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "praemie_id")
@@ -53,9 +53,9 @@ public class Praemien {
 
     @Column(name = "praemien_talentsichtung")
     private int praemienTalentsichtung;
-	
+
 	public Praemien () {
-		
+
 	}
 
 	public Praemien(int praemieId, int praemienSaisonId, int praemienEinzelRennenId, boolean praemienHelfereinsatz,
@@ -190,6 +190,6 @@ public class Praemien {
 	public void setPraemienTalentsichtung(int praemienTalentsichtung) {
 		this.praemienTalentsichtung = praemienTalentsichtung;
 	}
-	
+
 
 }

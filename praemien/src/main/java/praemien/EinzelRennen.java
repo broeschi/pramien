@@ -3,7 +3,7 @@ package praemien;
 import java.text.DateFormat;
 
 public class EinzelRennen {
-	
+
 	public int einzelRennenId;
 	public DateFormat einzelRennenRennDatum;
 	public String einzelRennenName;
@@ -14,14 +14,14 @@ public class EinzelRennen {
 	public int einzelRennenRang;
 	public String einzelRennenLink;
 	public int einzelRennenPunkte;
-	
+
 	public  EinzelRennen () {
-		
+
 	}
 /**
  * Konstruktor für das Objekt eines einzelnen Rennen zusammenzufassen
- * 
- * 
+ *
+ *
  * @param einzelRennenId
  * @param einzelRennenRennDatum
  * @param einzelRennenName
@@ -33,7 +33,7 @@ public class EinzelRennen {
  * @param einzelRennenLink
  * @param einzelRennenPunkte
  */
-	
+
 	public EinzelRennen(int einzelRennenId, DateFormat einzelRennenRennDatum, String einzelRennenName,
 			int einzelRennenDisziplinId, int einzelRennenSaisonId, int einzelRennenPersonId, int einzelRennenRennArtId,
 			int einzelRennenRang, String einzelRennenLink, int einzelRennenPunkte) {
@@ -129,7 +129,7 @@ public class EinzelRennen {
 	public void setEinzelRennenPunkte(int einzelRennenPunkte) {
 		this.einzelRennenPunkte = einzelRennenPunkte;
 	}
-	
-	
+
+
 
 }

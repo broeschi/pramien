@@ -1,14 +1,5 @@
 package person;
 
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.LongProperty;
-import javafx.beans.property.ObjectProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleLongProperty;
-import javafx.beans.property.SimpleObjectProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
-
 /** Klasse zum Bilden der Teilnehmer */
 public class Person {
 
@@ -25,7 +16,7 @@ public class Person {
 
 //	/**
 //	 * Konstruktor für eine Person (Modell)
-//	 * 
+//	 *
 //	 * @param personId
 //	 * @param personName
 //	 * @param personVorname
@@ -44,7 +35,7 @@ public class Person {
 
 	/**
 	 * Konstruktor für die Erfassung von Vorname und Name
-	 * 
+	 *
 	 * @param personName
 	 * @param personVorname
 	 */
@@ -56,13 +47,13 @@ public class Person {
 //		//this.adrJahrgang = new SimpleIntegerProperty(adrJahrgang);
 //
 //	}
-	
+
 	/**
-	 * Konstruktor für den Cucumpertest 
-	 * 
+	 * Konstruktor für den Cucumpertest
+	 *
 	 * abgefragt werden die ID, der Name und Vorname des Rennfahrers und seine Lizenznummer
-	 * 
-	 * 
+	 *
+	 *
 	 * @param personId
 	 * @param personName
 	 * @param personVorname
@@ -100,7 +91,7 @@ public class Person {
 	public int personId() {
 		return personId;
 	}
-	
+
 	public int getPersonId() {
 		return personId;
 	}

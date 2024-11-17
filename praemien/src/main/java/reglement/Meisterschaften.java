@@ -1,20 +1,20 @@
 package reglement;
 
 public class Meisterschaften {
-	
+
 	public int meisterId;
 	public String meisterName;
 	public String meisterAbk;
-	
+
 	public Meisterschaften() {
-		
+
 	}
-	
+
 	public Meisterschaften(int meisterId, String meisterName, String meisterAbk) {
 		this.meisterId = meisterId;
 		this.meisterName = meisterName;
 		this.meisterAbk = meisterAbk;
-		
+
 	}
 
 	public int getMeisterId() {
@@ -40,6 +40,6 @@ public class Meisterschaften {
 	public void setMeisterAbk(String meisterAbk) {
 		this.meisterAbk = meisterAbk;
 	}
-	
+
 
 }

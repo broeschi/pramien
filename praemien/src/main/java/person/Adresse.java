@@ -1,18 +1,18 @@
 package person;
 
 public class Adresse {
-	
+
 	public int adresseId;
 	public int adressePersonId;
 	public String adresseStrasse;
 	public int adresseNummer;
 	public int adressePlz;
 	public String adresseOrt;
-	
-	
+
+
 	/**
 	 * Konstruktor für die Adressdaten mit dem Fremdschlussel zum Objekt Person
-	 * 
+	 *
 	 * @param adresseId
 	 * @param adressePersonId
 	 * @param adresseStrasse
@@ -20,21 +20,21 @@ public class Adresse {
 	 * @param adressePlz
 	 * @param adresseOrt
 	 */
-	
+
 	public Adresse(int adresseId, int adressePersonId, String adresseStrasse, int adresseNummer, int adressePlz, String adresseOrt) {
-		
+
 		this.adresseId = new Integer(adresseId);
 		this.adressePersonId = new Integer(adressePersonId);
 		this.adresseStrasse = new String(adresseStrasse);
 		this.adresseNummer = new Integer(adresseNummer);
 		this.adressePlz = new Integer(adressePlz);
 		this.adresseOrt = new String (adresseOrt);
-		
+
 	}
 
 
 	public Adresse() {
-		
+
 	}
 
 
