@@ -1,15 +1,15 @@
 package reglement;
 
 public class KilometerGeld {
-	
+
 	public int kmgId;
 	public int kmgAnzahlFahrer;
 	public double kmgFrankenProKm;
-	
+
 	public KilometerGeld() {
-		
+
 	}
-	
+
 	public KilometerGeld(int kmgId, int kmgAnzahlFaher, double kmgFrankenProKm) {
 		this.kmgId = kmgId;
 		this.kmgAnzahlFahrer = kmgAnzahlFaher;
@@ -39,6 +39,6 @@ public class KilometerGeld {
 	public void setKmgFrankenProKm(double kmgFrankenProKm) {
 		this.kmgFrankenProKm = kmgFrankenProKm;
 	}
-	
+
 
 }

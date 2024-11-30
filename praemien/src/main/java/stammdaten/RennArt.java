@@ -1,17 +1,17 @@
 package stammdaten;
 
 public class RennArt {
-	
+
 	public int  rennArtId;
 	public String  rennArtName;
-	
-	
+
+
 	public RennArt() {
-		
+
 	}
-	
+
 	public RennArt(int rennArtId, String rennArtName) {
-		
+
 		this.rennArtId = rennArtId;
 		this.rennArtName = rennArtName;
 	}

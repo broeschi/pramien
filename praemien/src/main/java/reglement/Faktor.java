@@ -4,10 +4,10 @@ public class Faktor {
 	public int faktorId;
 	public int faktorKatId;
 	public double faktorFaktor;
-	
+
 	/**
 	 * Datenmodell für die Umrechnungsfaktoren nach Kategorien.
-	 * 
+	 *
 	 * @param faktorId
 	 * @param faktorKatId
 	 * @param faktorFaktor
@@ -16,10 +16,10 @@ public class Faktor {
 		this.faktorId = faktorId;
 		this.faktorKatId = faktorKatId;
 		this.faktorFaktor = faktorFaktor;
-		
+
 	}
 	public Faktor() {
-		
+
 	}
 	public int getFaktorId() {
 		return faktorId;

@@ -1,26 +1,26 @@
 package stammdaten;
 
 public class Disziplin {
-	
+
 	public int disziplinId;
 	public String disziplinName;
 	public String disziplinAbk;
-	
-	
-	/** 
+
+
+	/**
 	 * leerer Konstruktor
-	 * 
+	 *
 	 */
 	public Disziplin() {
-		
+
 	}
-	
+
 	public Disziplin(int disziplinId, String disziplinName, String dispziplinAbk)	{
-		
+
 		this.disziplinId = disziplinId;
 		this.disziplinName = disziplinName;
 		this.disziplinAbk = dispziplinAbk;
-		
+
 	}
 
 	public int getDisziplinId() {

@@ -1,145 +1,92 @@
+
 package person;
 
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.LongProperty;
-import javafx.beans.property.ObjectProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleLongProperty;
-import javafx.beans.property.SimpleObjectProperty;
+import javax.persistence.*;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import java.util.ArrayList;
+import java.util.List;
 
-/** Klasse zum Bilden der Teilnehmer */
+@Entity
+@Table(name = "person")
 public class Person {
 
-	public int personId;
-	public String personVorname;
-	public String personName;
-	//private final StringProperty adrStrasse;
-	//private final StringProperty adrNr;
-	//private final IntegerProperty adrPLZ;
-	//private final StringProperty adrWohnort;
-	public int personJahrgang;
-	public int personLizenz;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int personId;
 
+    @Column(name = "person_vorname")
+    private String personVorname;
 
-//	/**
-//	 * Konstruktor für eine Person (Modell)
-//	 * 
-//	 * @param personId
-//	 * @param personName
-//	 * @param personVorname
-//
-//	 * @param personJahrgang
-//
-//
-//	 */
-//	public Person(int personId, String personName, String personVorname, int personJahrgang) {
-//		this.personId = new Integer(personId);
-//		this.personName = new String(personName);
-//		this.personVorname = new String(personVorname);
-//		this.personJahrgang = new Integer(personJahrgang);
-//
-//	}
+    @Column(name = "person_name")
+    private String personName;
 
-	/**
-	 * Konstruktor für die Erfassung von Vorname und Name
-	 * 
-	 * @param personName
-	 * @param personVorname
-	 */
-//	public Person(String personName, String personVorname) {
-//		this.personId = new Integer(personId);
-//		this.personName = new String(personName);
-//		this.personVorname = new String(personVorname);
-//
-//		//this.adrJahrgang = new SimpleIntegerProperty(adrJahrgang);
-//
-//	}
-	
-	/**
-	 * Konstruktor für den Cucumpertest 
-	 * 
-	 * abgefragt werden die ID, der Name und Vorname des Rennfahrers und seine Lizenznummer
-	 * 
-	 * 
-	 * @param personId
-	 * @param personName
-	 * @param personVorname
-	 * @param personLizenz
-	 */
-	public Person(int personId, String personName, String personVorname, int personLizenz) {
-		this.personId = new Integer(personId);
-		this.personName = new String(personName);
-		this.personVorname = new String(personVorname);
-		this.personLizenz = new Integer(personLizenz);
-			//this.adrJahrgang = new SimpleIntegerProperty(adrJahrgang);
-		System.out.println("gelesene Person: " + personVorname + " " + personName + " " + personLizenz );
+    @Column(name = "person_jahrgang")
+    private int personJahrgang;
 
-	}
+    @Column(name = "person_lizenz")
+    private int personLizenz;
 
-	/**
-	 * leerer Konstruktor
-	 */
-	public Person() {
-		System.out.println("gelesene Person: " + personVorname + " " + personName + " " + personLizenz );
-	}
+    @OneToMany(mappedBy = "person", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Adresse> adressen;
 
-	public String personName() {
-		return personName;
-	}
+    public Person(int personId, String personName, String personVorname, int personLizenz) {
+        this.personId = personId;
+        this.personName = personName;
+        this.personVorname = personVorname;
+        this.personLizenz = personLizenz;
+        this.adressen = new ArrayList<>();
+    }
 
-	public String Vorname() {
-		return personVorname;
-	}
+    public Person() {
+        this.adressen = new ArrayList<>();
+    }
 
-	public Integer personIdProperty() {
-		return personId;
-	}
+    public String getPersonName() {
+        return personName;
+    }
 
-	public int personId() {
-		return personId;
-	}
-	
-	public int getPersonId() {
-		return personId;
-	}
+    public void setPersonName(String personName) {
+        this.personName = personName;
+    }
 
-	public void setPersonId(int adrId) {
-		this.personId = adrId;
-	}
+    public String getPersonVorname() {
+        return personVorname;
+    }
 
-	public String getPersonVorname() {
-		return personVorname;
-	}
+    public void setPersonVorname(String personVorname) {
+        this.personVorname = personVorname;
+    }
 
-	public void setPersonVorname(String personVorname) {
-		this.personVorname = personVorname;
-	}
+    public int getPersonJahrgang() {
+        return personJahrgang;
+    }
 
-	public String getPersonName() {
-		return personName;
-	}
+    public void setPersonJahrgang(int personJahrgang) {
+        this.personJahrgang = personJahrgang;
+    }
 
-	public void setPersonName(String adrName) {
-		this.personName = adrName;
-	}
+    public int getPersonLizenz() {
+        return personLizenz;
+    }
 
-	public int getPersonJahrgang() {
-		return personJahrgang;
-	}
+    public void setPersonLizenz(int personLizenz) {
+        this.personLizenz = personLizenz;
+    }
 
-	public void setPersonJahrgang(int personJahrgang) {
-		this.personJahrgang = personJahrgang;
-	}
+    public List<Adresse> getAdressen() {
+        return adressen;
+    }
 
-	public int getPersonLizenz() {
-		return personLizenz;
-	}
+    public void addAdresse(Adresse adresse) {
+        this.adressen.add(adresse);
+    }
 
-	public void setPersonLizenz(int adrLizenz) {
-		this.personLizenz = adrLizenz;
-	}
+    public StringProperty personNameProperty() {
+        return new SimpleStringProperty(personName);
+    }
 
-
+    public StringProperty personVornameProperty() {
+        return new SimpleStringProperty(personVorname);
+    }
 }

@@ -3,23 +3,23 @@ package stammdaten;
 import java.text.DateFormat;
 
 public class Saison {
-	
+
 	public int saisonId;
 	public int saisnonJahr;
 	public DateFormat saisonVon;
 	public DateFormat saisonBis;
-	
+
 	/**
 	 * leerer Konstruktor für Saison
 	 */
 	public Saison() {
-		
+
 	}
-	
+
 	/**¨
-	 * Konstruktor für die Saison mit der Zuordnung zum Jahr, welches mit dem Datum von und Datum bis eingeschränkt wird. 
+	 * Konstruktor für die Saison mit der Zuordnung zum Jahr, welches mit dem Datum von und Datum bis eingeschränkt wird.
 	 * Die Saison endet für die Abrechnung jeweils am 31.10. somit beginnt die neue Saison für das folgende Jahr jeweils  am 1. November.
-	 * 
+	 *
 	 * @param saisonId
 	 * @param saisonJahr
 	 * @param saisonVon
