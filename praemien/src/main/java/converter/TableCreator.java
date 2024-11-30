@@ -3,26 +3,23 @@ package converter;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
-import javax.persistence.TypedQuery;
-import person.Adresse;
-import person.Person;
 import datenbank.EntityManagerFactoryUtil;
 
-
-public class AdresseConverter {
+public class TableCreator {
 
     private EntityManager entityManager;
 
-    public AdresseConverter() {
+    public TableCreator() {
         this.entityManager = EntityManagerFactoryUtil.getEntityManagerFactory().createEntityManager();
     }
 
-    public void saveAdresse(Adresse adresse, Person person) {
-        adresse.setPerson(person); // Set the person object
+    public void createTable(String tableName, String createTableSQL) {
         EntityTransaction transaction = entityManager.getTransaction();
         try {
             transaction.begin();
-            entityManager.persist(adresse);
+            if (!isTableExists(tableName)) {
+                entityManager.createNativeQuery(createTableSQL).executeUpdate();
+            }
             transaction.commit();
         } catch (Exception e) {
             if (transaction.isActive()) {
@@ -32,9 +29,12 @@ public class AdresseConverter {
         }
     }
 
-    public Adresse getAdresse(int adresseId) {
-        TypedQuery<Adresse> query = entityManager.createQuery("SELECT a FROM Adresse a WHERE a.adresseId = :adresseId", Adresse.class);
-        query.setParameter("adresseId", adresseId);
-        return query.getSingleResult();
+    private boolean isTableExists(String tableName) {
+        try {
+            entityManager.createNativeQuery("SELECT 1 FROM " + tableName + " LIMIT 1").getSingleResult();
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 }

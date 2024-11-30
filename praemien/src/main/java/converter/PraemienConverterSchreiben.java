@@ -1,5 +1,5 @@
 
-// File: src/main/java/converter/PraemienConverter.java
+// File: src/main/java/converter/PraemienConverterSchreiben.java
 package converter;
 
 import javax.persistence.EntityManager;
@@ -9,7 +9,7 @@ import praemien.Praemien;
 public class PraemienConverterSchreiben {
 
     public void convertPraemien() {
-    	EntityManager em = EntityManagerFactoryUtil.getEntityManagerFactory().createEntityManager();
+        EntityManager em = EntityManagerFactoryUtil.getEntityManagerFactory().createEntityManager();
         em.getTransaction().begin();
 
         Praemien praemien = new Praemien();
@@ -32,6 +32,5 @@ public class PraemienConverterSchreiben {
         em.getTransaction().commit();
 
         em.close();
-        
     }
 }

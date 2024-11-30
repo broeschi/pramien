@@ -1,13 +1,35 @@
 package person;
 
+import javax.persistence.*;
+import java.time.LocalDate;
+
+
+@Entity
+@Table(name = "adresse")
 public class Adresse {
 
-	public int adresseId;
-	public int adressePersonId;
-	public String adresseStrasse;
-	public int adresseNummer;
-	public int adressePlz;
-	public String adresseOrt;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int adresseId;
+	
+	@ManyToOne
+	@JoinColumn(name =  "person_id")
+	private Person person;
+	
+	@Column(name = "strasse")
+	private String adresseStrasse;
+	
+	@Column(name = "strassennummer")
+	private int adresseNummer;
+	
+	@Column (name = "plz")
+	private int adressePlz;
+	
+	@Column (name = "ort")
+	private  String adresseOrt;
+	
+	@Column (name = "gueltig_ab)")
+	private LocalDate adresseGueltigAb;
 
 
 	/**
@@ -21,14 +43,15 @@ public class Adresse {
 	 * @param adresseOrt
 	 */
 
-	public Adresse(int adresseId, int adressePersonId, String adresseStrasse, int adresseNummer, int adressePlz, String adresseOrt) {
+	public Adresse(int adresseId, int adressePersonId, String adresseStrasse, int adresseNummer, int adressePlz, String adresseOrt, LocalDate adresseGueltigAb) {
 
 		this.adresseId = new Integer(adresseId);
-		this.adressePersonId = new Integer(adressePersonId);
+		
 		this.adresseStrasse = new String(adresseStrasse);
 		this.adresseNummer = new Integer(adresseNummer);
 		this.adressePlz = new Integer(adressePlz);
 		this.adresseOrt = new String (adresseOrt);
+		this.adresseGueltigAb =  adresseGueltigAb;
 
 	}
 
@@ -36,6 +59,11 @@ public class Adresse {
 	public Adresse() {
 
 	}
+
+    // New constructor
+    public Adresse(int id, int number, String street, int postalCode, int cityCode, String city) {
+        this(id, number, street, postalCode, cityCode, city, LocalDate.now());
+    }
 
 
 	public int getAdresseId() {
@@ -48,14 +76,6 @@ public class Adresse {
 	}
 
 
-	public int getAdressePersonId() {
-		return adressePersonId;
-	}
-
-
-	public void setAdressePersonId(int adressePersonId) {
-		this.adressePersonId = adressePersonId;
-	}
 
 
 	public String getAdresseStrasse() {
@@ -95,6 +115,20 @@ public class Adresse {
 
 	public void setAdresseOrt(String adresseOrt) {
 		this.adresseOrt = adresseOrt;
+	}
+	
+	public Person getPerson()  {
+		return person;
+	}
+	
+	public void setPerson (Person person) {
+		this.person =person;
+	}
+
+
+	public void setGueltigAb(LocalDate now) {
+		this.adresseGueltigAb = now;
+		
 	}
 
 }
