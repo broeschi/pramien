@@ -6,7 +6,7 @@ public class Faktor {
 	public double faktorFaktor;
 
 	/**
-	 * Datenmodell für die Umrechnungsfaktoren nach Kategorien.
+	 * Datenmodell fuer die Umrechnungsfaktoren nach Kategorien.
 	 *
 	 * @param faktorId
 	 * @param faktorKatId

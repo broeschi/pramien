@@ -14,7 +14,7 @@ public class Adresse {
 	
 	@ManyToOne
 	@JoinColumn(name =  "person_id")
-	private Person person;
+	private int adressePersonId;
 	
 	@Column(name = "strasse")
 	private String adresseStrasse;
@@ -30,6 +30,10 @@ public class Adresse {
 	
 	@Column (name = "gueltig_ab)")
 	private LocalDate adresseGueltigAb;
+	
+	@ManyToOne
+	@JoinColumn(name = "person_id")
+	private Person person;
 
 
 	/**
@@ -43,18 +47,15 @@ public class Adresse {
 	 * @param adresseOrt
 	 */
 
-	public Adresse(int adresseId, int adressePersonId, String adresseStrasse, int adresseNummer, int adressePlz, String adresseOrt, LocalDate adresseGueltigAb) {
-
-		this.adresseId = new Integer(adresseId);
-		
-		this.adresseStrasse = new String(adresseStrasse);
-		this.adresseNummer = new Integer(adresseNummer);
-		this.adressePlz = new Integer(adressePlz);
-		this.adresseOrt = new String (adresseOrt);
-		this.adresseGueltigAb =  adresseGueltigAb;
-
-	}
-
+    public Adresse(int adresseId, int adressePersonId, String adresseStrasse, int adresseNummer, int adressePlz, String adresseOrt, LocalDate adresseDatum) {
+        this.adresseId = adresseId;
+        this.adressePersonId = adressePersonId;
+        this.adresseStrasse = adresseStrasse;
+        this.adresseNummer = adresseNummer;
+        this.adressePlz = adressePlz;
+        this.adresseOrt = adresseOrt;
+        this.adresseGueltigAb = adresseDatum;
+    }
 
 	public Adresse() {
 
@@ -73,6 +74,10 @@ public class Adresse {
 
 	public void setAdresseId(int adresseId) {
 		this.adresseId = adresseId;
+	}
+	
+	public int getAdressePersonId() {
+		return (adressePersonId);
 	}
 
 
@@ -117,18 +122,19 @@ public class Adresse {
 		this.adresseOrt = adresseOrt;
 	}
 	
-	public Person getPerson()  {
-		return person;
-	}
-	
-	public void setPerson (Person person) {
-		this.person =person;
-	}
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
+    }
 
 
 	public void setGueltigAb(LocalDate now) {
 		this.adresseGueltigAb = now;
 		
 	}
+
 
 }
